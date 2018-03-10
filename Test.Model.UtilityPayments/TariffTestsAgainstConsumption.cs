@@ -6,11 +6,11 @@ using Xunit;
 
 namespace Test.Model.UtilityPayments
 {
-	public class TariffTests
+	public class TariffTestsAgainstConsumption
 	{
 		private readonly Tariff _tariff;
 
-		public TariffTests()
+		public TariffTestsAgainstConsumption()
 		{
 			_tariff = new Tariff
 			{

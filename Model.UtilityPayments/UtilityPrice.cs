@@ -1,5 +1,8 @@
-﻿namespace Model.UtilityPayments
+﻿using System.Diagnostics;
+
+namespace Model.UtilityPayments
 {
+	[DebuggerDisplay("[{From}; {To}] ${Price}")]
 	public class UtilityPrice
 	{
 		public UtilityPrice(double from, double? to, decimal price)
@@ -10,7 +13,9 @@
 		}
 
 		public double From { get; }
-		public double? To { get; }
+		public double? To { get; private set; }
 		public decimal Price { get; }
+
+		public void ChangeUpperBound(double? newTo) => To = newTo;
 	}
 }
